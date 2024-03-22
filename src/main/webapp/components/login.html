@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/removebglogo.png"
+      type="image/x-icon"
+    />
+    <title>Indian Bank - Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+        body{
+            background-image: url('https://s3.wns.com/S3_5/Images/Articles/HeaderImage/7064/92/2040.jpg');
+            background-repeat: no-repeat;
+        }
+      .gradient-custom-2 {
+        /* fallback for old browsers */
+        background: #fccb90;
+
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(
+          to right,
+          #ee7724,
+          #ca6822,
+          #e73d3d,
+          #d03c3cdc
+        );
+
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(
+          to right,
+          #ee7724,
+          #d16628,
+          #d12e2e,
+          #f02a2a
+        );
+      }
+
+      @media (min-width: 768px) {
+        .gradient-form {
+          height: 100vh !important;
+        }
+      }
+      @media (min-width: 769px) {
+        .gradient-custom-2 {
+          border-top-right-radius: 0.3rem;
+          border-bottom-right-radius: 0.3rem;
+        }
+      }
+      .form-outline label{
+        color: rgb(252, 110, 58);
+        font-size: small;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="h-100 gradient-form">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-xl-10">
+            <div class="card rounded-3 text-black">
+              <div class="row g-0">
+                <div class="col-lg-6">
+                  <div class="card-body p-md-5 mx-md-4 pb-3">
+                    <div class="text-center">
+                      <img
+                        src="assets/images/logoforlogin-removebg-preview.png"
+                        style="width: 250px"
+                        alt="logo"
+                      />
+                    </div>
+
+                      <form action="validateCredentials" method="get">
+                      <h6 class="font-weight-normal text-lg pb-2">Please login to your account</h6>
+
+                      <div class="form-outline mb-4">
+                        <input
+                          type="email"
+                          id="emailID"
+                          class="form-control"
+                          placeholder="Phone number or email address"
+                        />
+                        <label class="form-label" for="emailID"
+                          >Username</label
+                        >
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <input
+                          type="password"
+                          id="pwd"
+                          class="form-control"
+                        />
+                        <label class="form-label" for="pwd"
+                          >Password</label
+                        >
+                      </div>
+
+                      <div class="text-center md-5 pb-2">
+                        <button
+                          class="btn btn-primary btn-block btn-md gradient-custom-2 pd-2"
+                          type="button"
+                          onclick="redirectToDashboard()"
+                        >Log in
+                        </button>
+
+                        <div class="pd-1"></div>
+                        
+                        <a class="text-muted" href="#">Forgot password?</a>
+                      </div>
+
+                      <div
+                        class="d-flex align-items-center justify-content-center pt-3 pb-4"
+                      >
+                        <p class="mb-0 me-2">Don't have an account?</p>
+                        <button type="button" class="btn btn-outline-danger" onclick="redirectToGetStarted()">
+                          Create new
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div
+                  class="col-lg-6 d-flex align-items-center gradient-custom-2"
+                >
+                  <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                    <h2 class="mb-4">"Digital payments karna aur aasan hai."</h2>
+                    <p class="small mb-0 pt-2">
+                        Indian Bank is a prominent public sector bank in India, operating with a vast network of branches and ATMs across the country. It offers a wide range of banking and financial services to individuals, businesses, and corporate clients.
+                    </p>
+                    <p class="small mb-0 pt-4">The bank provides various services, including retail banking, corporate banking, treasury operations, and other financial products. It caters to the diverse financial needs of its customers.</p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function redirectToDashboard() {
+        // Redirect to the dashboard page after successful login
+        window.location.href = "dashboard.html";
+      }
+      function redirectToGetStarted() {
+        // Redirect to the dashboard page after successful login
+        window.location.href = "getStarted.html";
+      }
+    </script>
+  </body>
+</html>
