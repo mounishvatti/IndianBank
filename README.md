@@ -1,4 +1,4 @@
-# Indian Bank - Personal Banking System
+# Indian Bank - Digital Financial Services
 
 ### Description:
 
